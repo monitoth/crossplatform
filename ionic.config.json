@@ -1,0 +1,7 @@
+{
+  "name": "crossplatform",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
