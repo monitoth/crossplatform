@@ -1,17 +1,25 @@
 {
   "name": "capacitor-app",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "An Amazing Capacitor App",
   "main": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/monitoth/crossplatform.git"
+  },
   "scripts": {
-    "electron:start": "electron ./"
+    "electron:start": "electron ./",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
   "dependencies": {
     "@capacitor/electron": "^1.4.0",
-    "electron-is-dev": "^1.1.0"
+    "electron-is-dev": "^1.1.0",
+    "electron-updater": "^4.2.0"
   },
   "devDependencies": {
-    "electron": "^7.0.0"
+    "electron": "^7.1.10",
+    "electron-builder": "^22.3.2"
   },
   "keywords": [
     "capacitor",

@@ -9,6 +9,15 @@
 <ion-content>
   <div class="ion-padding">
     Ionic capacitor crossplatform app.
-    Version 0.0.2
+    <p id="version"></p>
+    <div id="notification" class="hidden">
+      <p id="message"></p>
+      <button id="close-button" onClick="closeNotification()">
+        Close
+      </button>
+      <button id="restart-button" onClick="restartApp()" class="hidden">
+        Restart
+      </button>
+    </div>
   </div>
 </ion-content>
