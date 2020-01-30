@@ -22,13 +22,14 @@ var desktopUpdater = (function(){
       restartButton.classList.remove('hidden');
       notification.classList.remove('hidden');
     });
+})
 
-    // Handles closing the notification
-    function closeNotification() {
-      notification.classList.add('hidden');
-    }
-    // Handles restarting the app to immediately install the downloaded update
-    function restartApp() {
-      ipcRenderer.send('restart_app');
-    }
+// Handles closing the notification
+var closeNotification = (function(){
+  notification.classList.add('hidden');
+})
+
+// Handles restarting the app to immediately install the downloaded update
+var restartApp = (function(){
+  ipcRenderer.send('restart_app');
 })

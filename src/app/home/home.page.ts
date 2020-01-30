@@ -1,5 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 declare var desktopUpdater: any;
+declare var closeNotification: any;
+declare var restartApp: any;
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -12,5 +14,13 @@ export class HomePage implements OnInit {
   ngOnInit(): void {
     // Call electron updater
     desktopUpdater();
+  }
+
+  closeNotificationBox() {
+    closeNotification();
+  }
+
+  restartDesktopApp() {
+    restartApp();
   }
 }
