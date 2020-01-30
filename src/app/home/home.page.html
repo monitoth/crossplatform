@@ -12,12 +12,12 @@
     <p id="version"></p>
     <div id="notification" class="hidden">
       <p id="message"></p>
-      <button id="close-button" onClick="closeNotification()">
+      <ion-button id="close-button" color="primary" (click)="closeNotification()">
         Close
-      </button>
-      <button id="restart-button" onClick="restartApp()" class="hidden">
+      </ion-button>
+      <ion-button id="restart-button" color="primary" (click)="restartApp()" class="hidden">
         Restart
-      </button>
+      </ion-button>
     </div>
   </div>
 </ion-content>
