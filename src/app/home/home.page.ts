@@ -1,4 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
+import { Plugins } from '@capacitor/core';
+
+const { Device } = Plugins;
 declare var desktopUpdater: any;
 declare var closeNotification: any;
 declare var restartApp: any;
@@ -11,9 +14,12 @@ export class HomePage implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    // Call electron updater
-    desktopUpdater();
+  async ngOnInit() {
+    const info = await Device.getInfo();
+    if (info && info.platform == 'electron') {
+      // Call electron updater
+      desktopUpdater();
+    }
   }
 
   closeNotificationBox() {
