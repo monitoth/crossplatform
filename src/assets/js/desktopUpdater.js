@@ -1,5 +1,6 @@
+
+const { ipcRenderer } = require('electron');
 var desktopUpdater = (function(){
-    const { ipcRenderer } = require('electron');
     var version = document.getElementById('version');
     var notification = document.getElementById('notification');
     var message = document.getElementById('message');
@@ -31,7 +32,6 @@ var closeNotification = (function(){
 
 // Handles restarting the app to immediately install the downloaded update
 var restartApp = (function(){
-  const { ipcRenderer } = require('electron');
   message.innerText = 'Restarting...';
   ipcRenderer.send('restart_app');
 })
